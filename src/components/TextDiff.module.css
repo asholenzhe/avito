@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.h {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.box {
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 12px;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.added {
+  background: color-mix(in oklab, #16a34a 22%, transparent);
+  border-radius: 4px;
+}
+
+.removed {
+  background: color-mix(in oklab, #ef4444 22%, transparent);
+  text-decoration: line-through;
+  border-radius: 4px;
+}

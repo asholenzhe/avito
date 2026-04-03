@@ -1,0 +1,82 @@
+.card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
+}
+
+.grid {
+  grid-template-rows: auto 1fr;
+}
+
+.list {
+  grid-template-columns: 220px 1fr;
+  align-items: stretch;
+}
+
+@media (max-width: 720px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img {
+  border-radius: 0;
+  border: none;
+}
+
+.list .img {
+  aspect-ratio: 16 / 10;
+}
+
+.body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cat {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--warn-border);
+  background: var(--warn-bg);
+  color: var(--warn-text);
+}
+
+.title {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--text);
+  margin-top: auto;
+}
